@@ -1,0 +1,46 @@
+{
+    "color": {
+        "dominantColorForeground": "White",
+        "dominantColorBackground": "Black",
+        "dominantColors": [],
+        "accentColor": "937E38",
+        "isBwImg": false,
+        "isBWImg": false
+    },
+    "description": {
+        "tags": [
+            "outdoor",
+            "mountain",
+            "rock",
+            "building",
+            "man",
+            "stone",
+            "sitting",
+            "rocky",
+            "old",
+            "desert",
+            "side",
+            "sheep",
+            "dirt",
+            "track",
+            "train",
+            "riding",
+            "bridge",
+            "water",
+            "standing",
+            "bird"
+        ],
+        "captions": [
+            {
+                "text": "a person sitting on a rock",
+                "confidence": 0.33140395767370123
+            }
+        ]
+    },
+    "requestId": "45148ae8-c115-4bde-925d-f4a5ad44180a",
+    "metadata": {
+        "height": 1280,
+        "width": 1920,
+        "format": "Jpeg"
+    }
+}
