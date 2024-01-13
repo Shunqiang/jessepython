@@ -1,5 +1,7 @@
 from data_define import Record
 from chardet import detect
+from pymysql import connect
+import json
 class FileReader:
     def read_data(self) -> list[Record]:
      pass
@@ -41,6 +43,41 @@ if __name__ == '__main__':
     print(c)
     text_file_reader = TextFileReader('C:/Users/admin/Desktop/data.txt')
     list1 = text_file_reader.read_data()
+
+# data_dict = {}
+# for record in list1:
+#     if record.date in data_dict.keys():
+#         print(1,list(data_dict.keys()),data_dict)
+#         data_dict[record.date] += record.money
+#     else:
+#         data_dict[record.date] = record.money
+# print(data_dict)
+
+# for line in list3:
+#     print(line)
+
+conn = connect(host='localhost', port=3306, user='root', autocommit=True, passwd='123456')
+
+conn.select_db('sys')
+
+cursor = conn.cursor()
+
+# cursor.execute("create table orders(date date, order_id varchar(255), money int, provice varchar(255))")
+
+
+# cursor.execute("insert into orders(date, order_id, money, provice) values('2020-01-01', '1', 100, '上海')") 
+
+# for x in list1:
+#     sql = f"insert into orders(date, order_id, money, provice) values('{x.date}', '{x.order_id}', '{x.money}', '{x.provice}')"
+#     cursor.execute(sql)
+cursor.execute('select * from orders')
+result: tuple = cursor.fetchall()  
+print(result)
+for x in result:
+    print(list(x))
     
-for line in list1:
-    print(line)
+conn.close()    
+
+
+
+
